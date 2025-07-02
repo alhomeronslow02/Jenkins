@@ -4,26 +4,22 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                echo 'Git stage'
-		git "https://github.com/alhomeronslow02/Jenkins"
+            	git "https://github.com/alhomeronslow02/Jenkins"
             }
         }
         stage('Build') {
             steps {
-                echo 'Build image'
-		sh 'echo "building the app sh command"'
+                sh 'echo "building the app sh command"'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test the app'
-		sh 'echo "Running tests sh command"'
+                sh 'echo "Running tests sh command"'
             }
         }
 	stage('Deploy') {
             steps {
-                echo 'Deploy the app'
-		sh 'echo "Deploy sh command"'
+                sh 'echo "Deploy sh command"'
             }
         }
     }
